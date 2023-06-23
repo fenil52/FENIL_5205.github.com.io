@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS/style.css">
+<!-- <link rel="stylesheet" href="JS/min.js" type="text/javascript"> -->
+  <title>Shopping Cart</title>
+ 
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <h1>Shopping Cart</h1>
+  <div class="container">
+   
+    <!-- product 1 -->
+
+    <div class="product product1">
+
+      <img src="IMAGES/ax.jpg">
+
+      <p>ARMANI EXCHANGE</p>
+
+    TOTAL=<input type="text"  id="price" value="9000" readonly> &nbsp;&nbsp;<del> MRP₹.10,000</del>&nbsp;&nbsp; 
+    10% OFF
+
+      <input type="number" min="1" max="4" value="1" id="qty" class="qty1" onchange="off(),total()" on >
+
+       <label id="total">TOTAL= ₹9,000</label> 
+
+       <p class="of">10%OFF</p><br>
+
+      PRICE WITH DISCOUNT<label id="off">₹8,100</label>
+
+      <button class="add-to-cart"><a href="" style="text-decoration: none; color: white;">BUY NOW</a></button>
+    </div>
+
+<!-----------------------------------------------------END------------------------------------------------------ -->
+   
+
+    <!-- product-2 -->
+    
+    <div class="product product2">
+
+      <img src="IMAGES/watch.avif">
+
+      <p class="missoni">MISSONI</p>
+
+       <input type="text" id="price2" readonly value="34000"> &nbsp;&nbsp;
+        
+        
+        <input type="number" min="1" max="4" value="1" id="qty2" class="qty2" onchange="total2(),off2()">
+
+        <label id="total2" value="34,000">TOTAL= ₹34,000</label> 
+
+        <p class="of">10%OFF</p><br>
+ 
+       PRICE WITH DISCOUNT<label id="off2">₹30,600</label> 
+
+
+      <button class="add-to-cart" ><a href="" style="text-decoration: none; color: white;">BUY NOW</a></button>
+    </div>
+
+<!-----------------------------------------------------END------------------------------------------------------ -->
+
+    
+    <!-- product-3 -->
+
+    <div class="product product3">
+
+      <img src="IMAGES/paul&shark.avif">
+      
+      <p>PAUL & SHARK</p>
+
+       <input type="text" name="" id="price3" readonl value="11000"> &nbsp;&nbsp;
+
+       <input type="number" min="1" max="4" value="1" id="qty3" class="qty3" onchange="total3(),off3()">
+
+       
+       <label id="total3" value="11000">TOTAL= ₹11,000</label> 
+
+       <p class="of">10%OFF</p><br>
+
+       PRICE WITH DISCOUNT<label id="off3">₹9,900</label> 
+
+      <button class="add-to-cart"><a href="" style="text-decoration: none; color: white;">BUY NOW</a></button>
+    </div>
+  </div>
+  
+
+    <h2>Cart </h2>
+
+    <a href="../IMAGES/ax.jpg"  ><img src="IMAGES/cart.jpg" alt="" class="img" height="50px" id="img"></a>
+    <p id="number"></p>
+  
+    <!-- Cart items will be dynamically added here -->
+  </div>
+
+  <!-----------------------------------------------------END---------------------------------------------------- -->
+
+  <script>
+
+    // product-1
+
+    function total()
+{
+  var p=document.getElementById("price").value;
+
+  var q=document.getElementById("qty").value;
+
+  var sub =p*q;
+  document.getElementById("total").innerHTML= "TOTAL=₹"+sub;
+
+  //--------------------------------------------------------------------------------------------------------------- 
+  
+} 
+
+  // 10%off
+
+  function off()
+  {
+    var p = document.getElementById("price").value;
+    var q= document.getElementById("qty").value;
+     
+    var sub=p*q;
+    var t=sub/10;
+    var off =sub-t ;
+  document.getElementById("off").innerHTML="₹"+off;
+  }
+
+  //--------------------------------------------------------------------------------------------------------------- 
+
+
+  // product-2
+
+  function total2()
+  {
+
+  var p=document.getElementById("price2").value;
+
+  var q=document.getElementById("qty2").value;
+
+  var subs =p*q;
+
+  document.getElementById("total2").innerHTML= "TOTAL=₹"+subs;
+  }
+
+  //--------------------------------------------------------------------------------------------------------------- 
+
+  // 10%off
+
+  function off2()
+  {
+    var p = document.getElementById("price2").value;
+    var q= document.getElementById("qty2").value;
+     
+    var sub=p*q;
+    var t=sub/10;
+    var off =sub-t ;
+  document.getElementById("off2").innerHTML="₹"+off;
+  }
+
+  //--------------------------------------------------------------------------------------------------------------- 
+
+  // product-3
+
+  function total3()
+  {
+
+  var p=document.getElementById("price3").value;
+
+  var q=document.getElementById("qty3").value;
+
+  var subs =p*q;
+
+  document.getElementById("total3").innerHTML= "TOTAL=₹"+subs;
+
+  }
+
+  // 10% OFF
+
+  function off3()
+  {
+    var p = document.getElementById("price3").value;
+    var q= document.getElementById("qty3").value;
+     
+    var sub=p*q;
+    var t=sub/10;
+    var off =sub-t ;
+  document.getElementById("off3").innerHTML="₹"+off;
+
+  }
+
+  </script>
+</body>
+</html>
